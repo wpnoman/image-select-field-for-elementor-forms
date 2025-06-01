@@ -13,7 +13,6 @@
  * Requires Plugins:  elementor
  */
 
-
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
@@ -27,7 +26,7 @@ define('ISFEFORMS_PLUGIN_PATH', plugin_dir_path(__FILE__));
  * Load file fiels
  */
 require ISFEFORMS_PLUGIN_PATH . 'includes/class-image-select-field-for-elementor-forms.php';
-require ISFEFORMS_PLUGIN_PATH . 'includes/class-isfef-widgets-control.php';
+require ISFEFORMS_PLUGIN_PATH . 'includes/class-isfeforms-widgets-control.php';
 
 
 if (! function_exists('ISFEFORMS_Image_Options_Fields_Elementor')) {

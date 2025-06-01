@@ -1,7 +1,7 @@
 === Image Select Field for Elementor Forms ===
 Contributors: WPNoman0
 Tags: image select field, elementor form, Elementor widgets, widgets for Elementor, elementor addon
-Requires at least: 5.0
+Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
 Stable tag: 1.0.1
