@@ -29,9 +29,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-weight: 500;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 15px;
 }
 
 .isfef-modernize-radio-checkbox .elementor-field-type-checkbox:not(.isfef-image-select) input[type="checkbox"]:checked+label,
@@ -85,8 +83,8 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 4px;
     transition: .3s all ease;
+    border-radius: 6px;
 }
 
 .isfef-image-select input:checked+label img {
@@ -103,7 +101,7 @@
 }
 
 .isfef-image-select label img {
-    padding: 25px;
+    padding: 15px;
 }
 
 .isfef-image-select .elementor-field-subgroup label {
@@ -135,5 +133,5 @@
     left: 5px;
     width: 16px;
     height: 16px;
-    top: 25%;
+    top: 16%;
 }

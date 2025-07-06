@@ -137,10 +137,11 @@ class ISFEFORMS_widgets_control
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-field-type-radio:not(.isfef-image-select) input[type="radio"]:checked+label:before, {{WRAPPER}} .elementor-field-type-checkbox:not(.isfef-image-select) input[type="checkbox"]:checked+label' => 'top: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}.isfef-modernize-radio-checkbox .elementor-field-type-checkbox:not(.isfef-image-select) input[type="checkbox"]:checked+label:before, {{WRAPPER}}.isfef-modernize-radio-checkbox .elementor-field-type-radio:not(.isfef-image-select) input[type="radio"]:checked+label:before' => 'top: {{SIZE}}%;',
                 ],
             ]
         );
+
         $element->add_control(
             'isfeforms_rc_icon_size',
             [
@@ -154,7 +155,7 @@ class ISFEFORMS_widgets_control
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-field-type-radio:not(.isfef-image-select) input[type="radio"]:checked+label:before, {{WRAPPER}} .elementor-field-type-checkbox:not(.isfef-image-select) input[type="checkbox"]:checked+label' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}.isfef-modernize-radio-checkbox .elementor-field-type-checkbox:not(.isfef-image-select) input[type="checkbox"]:checked+label:before, {{WRAPPER}}.isfef-modernize-radio-checkbox .elementor-field-type-radio:not(.isfef-image-select) input[type="radio"]:checked+label:before' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -167,6 +168,25 @@ class ISFEFORMS_widgets_control
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}}' => '--isfef_theme_color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // add padding
+        $element->add_control(
+            'isfeforms_img_padding',
+            [
+                'label' => __('Image Padding', 'image-select-field-for-elementor-forms'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .isfef-image-select label img' => 'padding: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
