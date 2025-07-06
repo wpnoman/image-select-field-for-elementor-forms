@@ -3,6 +3,16 @@
 
     $(document).ready(function () {
 
+        $("[data-isfef-modernize]").each(function () {
+            var $form = $(this);
+            var imageSelectFields = $form.data("isfef-modernize");
+            console.log(imageSelectFields)
+            if (imageSelectFields == true) {
+                // Add class to the form for modernizing radio and checkbox styles
+                $form.addClass('isfef-modernize-radio-checkbox');
+            }
+        });
+
         $("[data-isfef-images]").each(function () {
 
             var $form = $(this);

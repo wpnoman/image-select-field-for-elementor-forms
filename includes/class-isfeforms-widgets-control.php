@@ -78,6 +78,99 @@ class ISFEFORMS_widgets_control
             )
         );
 
+        $element->add_control(
+            'isfeforms_img_icon_adjustment_slider',
+            [
+                'label' => __('Icon Adjustment ( Image Selector )', 'image-select-field-for-elementor-forms'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['%'],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .isfef-image-select input:checked+label:before' => 'top: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $element->add_control(
+            'isfeforms_img_icon_size',
+            [
+                'label' => __('Icon Size ( Image Selector )', 'image-select-field-for-elementor-forms'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .isfef-image-select input:checked+label:before' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $element->add_control(
+            'modernize_radio_checkbox',
+            [
+                'label' => esc_html__('Modernize Your Radio/Checkbox', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'textdomain'),
+                'label_off' => esc_html__('No', 'textdomain'),
+            ]
+        );
+
+        $element->add_control(
+            'isfeforms_icon_adjustment_slider',
+            [
+                'label' => __('Icon Adjustment ( Radio/Checkbox Selector )', 'image-select-field-for-elementor-forms'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['%'],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-field-type-radio:not(.isfef-image-select) input[type="radio"]:checked+label:before, {{WRAPPER}} .elementor-field-type-checkbox:not(.isfef-image-select) input[type="checkbox"]:checked+label' => 'top: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $element->add_control(
+            'isfeforms_rc_icon_size',
+            [
+                'label' => __('Icon Size ( Radio/Checkbox Selector )', 'image-select-field-for-elementor-forms'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-field-type-radio:not(.isfef-image-select) input[type="radio"]:checked+label:before, {{WRAPPER}} .elementor-field-type-checkbox:not(.isfef-image-select) input[type="checkbox"]:checked+label' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // color
+        $element->add_control(
+            'isfeforms_icon_color',
+            [
+                'label' => __('Theme Color', 'image-select-field-for-elementor-forms'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}}' => '--isfef_theme_color: {{VALUE}};',
+                ],
+            ]
+        );
+
         $element->end_controls_section();
     }
 
@@ -110,6 +203,7 @@ class ISFEFORMS_widgets_control
                     wp_enqueue_script('isfef-scripts');
                     $element->add_render_attribute('_wrapper', [
                         'data-isfef-images' => esc_attr(json_encode($rep_data)),
+                        'data-isfef-modernize' => !empty($settings['modernize_radio_checkbox']) && $settings['modernize_radio_checkbox'] === 'yes' ? 'true' : 'false',
                     ]);
                 }
             }
