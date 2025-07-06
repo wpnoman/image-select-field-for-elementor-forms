@@ -4,7 +4,7 @@ Tags: elementor form addon, image radio field, custom checkbox elementor, visual
 Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,9 @@ First version – adds Image Select Field to Elementor Forms.
 = 1.0.2 =
 - Add New controls
 - Fix minor issues
+
+= 1.0.3 =
+- Fix bug
 
 == Installation ==
 1. Upload the plugin files to the `/wp-content/plugins/image-select-field-for-elementor-forms` directory, or install the plugin through the WordPress plugins screen directly.
