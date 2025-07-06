@@ -1,6 +1,6 @@
 === Image Select Field for Elementor Forms ===
 Contributors: WPNoman0
-Tags: elementor form addon, image radio field, custom checkbox elementor, visual form selector, modern form ui, elementor image select, image choice field, custom form fields, elementor form customization, form image options, radio button with image, checkbox with image
+Tags: custom checkbox elementor, elementor image select, image choice field, radio button with image, checkbox with image
 Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
