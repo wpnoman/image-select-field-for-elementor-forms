@@ -4,7 +4,7 @@ Tags: elementor addon, image select, visual form field, elementor form field, im
 Requires at least: 5.9  
 Tested up to: 6.8  
 Requires PHP: 7.4  
-Stable tag: 1.0.1  
+Stable tag: 1.0.2
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -16,20 +16,10 @@ Enhance Elementor Forms with image-based selection options. Add image select fie
 
 This plugin is ideal for anyone looking to create more interactive and visually engaging forms using Elementor. No need for third-party form builders—this addon works directly within Elementor’s native form widget.
 
-**Use Cases:**
-- Product style or color selection
-- Plan/package comparison
-- Image-based quizzes or surveys
-- Visual service selection
-- Booking options with icons/images
-
 **Key Features:**
-- Seamlessly integrates with Elementor Form widget
-- Adds a custom image select field type
-- Visual and intuitive UX for users
-- Fully responsive and mobile-friendly
-- Easy to use—no coding required
-- Compatible with Elementor Free & Pro
+- modernization Native Elementor Form
+- Elementor Form Image selector
+- Modern Radio / Checkbox Style
 
 == Installation ==
 
@@ -37,7 +27,7 @@ This plugin is ideal for anyone looking to create more interactive and visually 
 2. Activate the plugin through the ‘Plugins’ menu in WordPress.
 3. Open any page using the Elementor editor.
 4. Add or edit a form using the native Elementor Form widget.
-5. Use the new “Image Select” field under the “Advanced Addons” or “Extra Fields” section.
+5. Use the new “Image Select” Tab Inside Form widget
 
 == Frequently Asked Questions ==
 
@@ -71,3 +61,7 @@ Contact your hosting provider for help.
 
 = 1.0.1 =
 First version – adds Image Select Field to Elementor Forms.
+
+= 1.0.2 =
+- Add New controls
+- Fix minor issues
